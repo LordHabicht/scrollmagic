@@ -79,7 +79,7 @@
             width:250px;
             background-color: #000;
             opacity: 0;
-            transform:translate(-50px,0);
+            transform:translate(-150px);
 
         }
         #block5 {
@@ -94,9 +94,9 @@
         }
 
         .fadein {
-            opacity:1;
-            //transform: translate(0);
-            //transition: 2s ;
+            opacity:1 !important;
+            transform: translate(0) !important;
+            transition: transform ease-in-out 2s , opacity 2s;
 
         }
 
@@ -290,7 +290,7 @@
             .addTo(controller)
 
         var pax = new ScrollMagic.Scene({triggerElement:'.bcg-parallax',duration:500,triggerHook:0})
-            .setPin(".bcg-parallax")
+            .setPin(".bcg-parallax",{pushFollowers:true})
             .addIndicators()
             .addTo(controller)
 
